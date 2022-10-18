@@ -15,8 +15,12 @@ function Play(props) {
         </div>
       </div>
       <div className="flex items-center gap-2 lg:hidden">
-        <img onClick={() => props.setIsplaying(!props.isPlaying)} src="/images/play.png" alt="play" />
-        <img onClick={() => props.skipSong(true)} src="/images/next.png" alt="next" />
+        <div onClick={() => props.setIsplaying(!props.isPlaying)}>
+        <img src="/images/play.png" alt="play" />
+        </div>
+        <div onClick={() => props.skipSong(true)}>
+        <img src="/images/next.png" alt="next" />
+        </div>
       </div>
       <div className="hidden lg:flex flex-col items-center">
         <div className="flex items-center gap-5 cursor-pointer">
